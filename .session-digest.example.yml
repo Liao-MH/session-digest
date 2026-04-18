@@ -1,0 +1,3 @@
+# Copy to .session-digest.yml in the installed skill directory if you want to preconfigure first-run state.
+platform: codex
+knowledge_repo: ~/knowledge-base
