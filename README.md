@@ -1,6 +1,6 @@
 # session-digest
 
-当前版本：`v1.0.1`
+当前版本：`v1.0.2`
 
 `session-digest` 是一个 Codex/AI 助手 skill，用于在用户要求“总结一下”“wrap up”“session digest”等场景下，将当前对话整理为可长期复用的 Markdown 资料。
 
@@ -22,8 +22,7 @@
 ```text
 .
 ├── SKILL.md
-├── .session-digest.example.yml
-└── VERSION
+└── .session-digest.example.yml
 ```
 
 ## 安装方式
