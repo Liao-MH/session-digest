@@ -1,5 +1,0 @@
-.DS_Store
-node_modules/
-
-# Runtime config contains the user's platform and private knowledge repository path.
-.session-digest.yml
