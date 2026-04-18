@@ -1,11 +1,21 @@
 # session-digest
 
-当前版本：`v1.0.0`
+当前版本：`v1.0.1`
 
-`session-digest` 是一个 Codex/AI 助手 skill，用于在用户要求“总结一下”“wrap up”“session digest”等场景下，将当前对话整理为两类输出：
+`session-digest` 是一个 Codex/AI 助手 skill，用于在用户要求“总结一下”“wrap up”“session digest”等场景下，将当前对话整理为可长期复用的 Markdown 资料。
 
-1. 可复用的通用知识条目，集中保存到用户指定的知识库。
-2. 项目全景上下文报告，保存到当前项目目录，便于新的 AI 实例无缝接续工作。
+## 设计来源与定位
+
+这个 skill 的设计参考了 `wrap-up` 类会话收尾工具：它同样关注在一次对话结束时，把上下文整理成后续可接续、可回看的材料。
+
+核心区别在于，`session-digest` 更偏向服务个人知识库构建。除了保存项目上下文，它会主动扫描对话中零散出现的通用知识，例如概念解释、工具使用方法、技术比较、经验原则和可复用方法论，并将这些内容整理为独立的 Markdown 知识条目，集中存入用户指定的知识库目录。
+
+也就是说，`wrap-up` 更像是一次会话的交接记录；`session-digest` 额外把对话中值得长期沉淀的知识从项目脉络里提取出来，变成可检索、可积累的个人知识资产。
+
+## 核心输出
+
+1. 通用知识条目：从对话中抽取可复用知识，保存为 Obsidian 友好的 Markdown 文件。
+2. 项目全景报告：保存当前项目或任务的完整上下文，便于新的 AI 实例继续工作。
 
 ## 文件结构
 
@@ -13,13 +23,7 @@
 .
 ├── SKILL.md
 ├── .session-digest.example.yml
-├── VERSION
-├── docs/
-│   ├── CHANGELOG.md
-│   └── DEMANDS.MD
-├── tests/
-│   └── release-version.test.mjs
-└── package.json
+└── VERSION
 ```
 
 ## 安装方式
@@ -64,14 +68,6 @@ help me organize this conversation
 - `.session-digest.yml` 是本地运行配置，可能包含个人路径，因此不会提交到仓库。
 - 本仓库不内置具体知识库目录，也不假设用户使用 Obsidian 以外的固定笔记结构。
 - 当前版本不提供自动同步、自动定时总结或多设备配置合并功能，避免超出 skill 的核心职责。
-
-## 验证
-
-```bash
-npm test
-```
-
-验证内容包括版本号一致性、README/CHANGELOG/DEMANDS 的版本记录，以及 skill frontmatter 的基础格式。
 
 ## 许可证
 
