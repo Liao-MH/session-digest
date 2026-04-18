@@ -1,6 +1,6 @@
 # session-digest
 
-当前版本：`v1.0.2`
+当前版本：`v1.0.3`
 
 `session-digest` 是一个 Codex/AI 助手 skill，用于在用户要求“总结一下”“wrap up”“session digest”等场景下，将当前对话整理为可长期复用的 Markdown 资料。
 
@@ -22,7 +22,8 @@
 ```text
 .
 ├── SKILL.md
-└── .session-digest.example.yml
+├── .session-digest.example.yml
+└── LICENSE
 ```
 
 ## 安装方式
@@ -70,4 +71,4 @@ help me organize this conversation
 
 ## 许可证
 
-当前未指定开源许可证。未经作者另行授权，本仓库内容不默认授予开源使用权。
+本仓库使用 MIT License。详见 `LICENSE`。
