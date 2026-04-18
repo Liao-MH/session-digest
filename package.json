@@ -1,9 +1,0 @@
-{
-  "name": "session-digest-skill",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Codex skill for extracting reusable knowledge and project context reports from AI sessions.",
-  "scripts": {
-    "test": "node tests/release-version.test.mjs"
-  }
-}
